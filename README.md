@@ -2,7 +2,7 @@
 
 ## **What is FFmpeg?**
 
-FF ⇒ Fast Forward , mpeg ⇒ Moving Picture Experts Group
+FF ⇒ Fast Forward, mpeg ⇒ Moving Picture Experts Group
 
 > The MPEG group is the alliance of working groups who are behind setting many of the most important video standards being used today including the MP4 format.
 > 
@@ -33,14 +33,14 @@ FF ⇒ Fast Forward , mpeg ⇒ Moving Picture Experts Group
 
 ## **Why use FFmpeg?**
 
-- Swiss army knife of transcoding/streaing
+- Swiss army knife of transcoding/streaming
 - Versatile (multiple functions)
 - Fast
 - Simple to run
 - Very flexible
-- Supports a very wide range of codecs, format, devices and protocols
-- It is still active under development
-- It has large community
+- Supports a very wide range of codecs, formats, devices, and protocols
+- It is still active and under development
+- It has a large community
 
 ![1592580187419.jpeg](FFmpeg%20bca5d9db303e4b2cac2889839c3a0d78/1592580187419.jpeg)
 
@@ -59,9 +59,9 @@ FF ⇒ Fast Forward , mpeg ⇒ Moving Picture Experts Group
 
 ---
 
-## **Who use FFmpeg?**
+## **Who uses FFmpeg?**
 
-- **Video Streaming Platforms like Youtube, iTunes…**
+- **Video Streaming Platforms like YouTube, iTunes…**
 - **Media Players and Editors like VLC**
 - Media asset management systems
 - Transcoders
@@ -79,7 +79,7 @@ FF ⇒ Fast Forward , mpeg ⇒ Moving Picture Experts Group
 
 - **libavcodec** ⇒ contains all the encoders and decoders that FFmpeg support
 - **libavformat** ⇒ has all the muxers and demuxers for dealing with various container formats like MP4, MKV, AVI, and more.
-- **libavfilter** ⇒ consists of a huge number of filters that you can use to modify thee audio or video such as scaling, cropping, resizing, and more
+- **libavfilter** ⇒ consists of a huge number of filters that you can use to modify the audio or video such as scaling, cropping, resizing, and more
 - **libavdevices** ⇒ support several different input and output devices
 - **libavutil** ⇒ contains utility functions that are used by other FFmpeg components. It includes functions for memory management, data structures, mathematics, and more
 - **libswscale** ⇒ is responsible for image scaling and conversion. It's often used to adapt the dimensions and color spaces of video frames
@@ -92,7 +92,7 @@ FF ⇒ Fast Forward , mpeg ⇒ Moving Picture Experts Group
 ## **FFmpeg Tools**
 
 - **ffmpeg**⇒ core tool of FFmpeg and provides a comprehensive set of options for transcoding, converting, and manipulating audio and video files. It can be used to change formats, resize videos, adjust codecs, and more
-- **ffplay** ⇒ minmal tool for playing audio and video
+- **ffplay** ⇒ minimal tool for playing audio and video
 - **ffprobe** ⇒ analyzing multimedia files and extracting information about their formats, codecs, streams, bit rates, and more
 - **ffserver** ⇒ allows you to set up a multimedia streaming server. It can stream audio and video content over networks using various protocols
 - **ffmpeg-avconv** ⇒ is a compatibility tool that provides a similar interface to the now-deprecated avconv command. It's useful for transitioning from avconv to FFmpeg
@@ -141,7 +141,7 @@ The easiest way to get FFmpeg installed is by APT package manager
 open your terminal and type…
 
 ```jsx
-sudo apt update   //to get latest version of apt
+sudo apt update   //to get the latest version of apt
 sudo apt install ffmpeg  //to install ffmpeg
 ffmpeg  //to check version is installed
 ```
@@ -150,18 +150,18 @@ ffmpeg  //to check version is installed
 
 1. go to [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html)
 
-1. Get your executable file for windows
+1. Get your executable file for Windows
 
 2. Choose the best build for you from 
-- master builds (full or essentials)
-- release builds (full or essentials)
-release essential is a good choice
+- master builds (full or essential)
+- release builds (full or essential)
+Release Essential is a good choice
 
-3. extract the downloaded file
+3. Extract the downloaded file
 
-4. add bin folder in extraxted folder to PATH environment variables 
+4. Add bin folder in extracted folder to PATH environment variables 
 
-5. type in your terminal ⇒ ffmpeg to check ffmpeg version
+5. Type in your terminal ⇒ ffmpeg to check ffmpeg version
 
 ![Screenshot 2023-08-22 093920.png](FFmpeg%20bca5d9db303e4b2cac2889839c3a0d78/Screenshot_2023-08-22_093920.png)
 
@@ -173,7 +173,7 @@ release essential is a good choice
 
 # #**FFprobe**
 
-It is a very powerful tool that can use it to extract and show various information about the media for example the resolution of the video, codec information, number of channels in an audio stream, etc.
+It is a very powerful tool that can be used to extract and show various information about the media for example the resolution of the video, codec information, number of channels in an audio stream, etc.
 
 ### **How to use FFprobe**
 
@@ -219,7 +219,7 @@ ffprobe -v error js.mp4 -show_format
 ffprobe -v error js.mp4 -show_streams
 ```
 
-It will show all information about input video strams (codec name - width - height - codec type - etc)
+It will show all information about input video streams (codec name - width - height - codec type - etc.)
 
 ![Screenshot 2023-08-22 193809.png](FFmpeg%20bca5d9db303e4b2cac2889839c3a0d78/Screenshot_2023-08-22_193809.png)
 
@@ -269,7 +269,7 @@ ffprobe -v error js.mp4  -show_entries format=format_long_name -print_format def
 
 ![Screenshot 2023-08-22 205922.png](FFmpeg%20bca5d9db303e4b2cac2889839c3a0d78/Screenshot_2023-08-22_205922.png)
 
-** if you want to remove wrapper **
+** if you want to remove the wrapper **
 
 ```bash
 ffprobe -v error js.mp4 -show_entries format=format_long_name -print_format default=noprint_wrappers=1
@@ -314,7 +314,7 @@ ffplay source.mp4
 ffplay -v error source.mp4
 ```
 
-3- Play video with spacific width and height
+3- Play video with specific width and height
 
 ```bash
 ffplay -v error source.mp4 -x 1080 -y 900
@@ -326,19 +326,19 @@ ffplay -v error source.mp4 -x 1080 -y 900
 ffplay -v error source.mp4 -x 1080 -y 900 -noborder
 ```
 
-5- Remove black area around the video 
+5- Remove the black area around the video 
 
 ```bash
 ffplay -v error source.mp4 -x 1080
 ```
 
-6- change the window position on the screen
+6- Change the window position on the screen
 
 ```bash
 ffplay -v error source.mp4 -top 0 -left 0
 ```
 
-7- display full screen video
+7- display full-screen video
 
 ```bash
 ffplay -v error source.mp4 -fs
@@ -383,8 +383,8 @@ ffplay -v error -sn source.mp4
 Shortcuts you can use while a video is playing.
 
 ```markdown
-- space => resume / pause
-- m => mute / unmute
+- space => resume/pause
+- m => mute/unmute
 - f => fullscreen
 - double lift click =>  fullscreen
 - / or 9 => volume down
